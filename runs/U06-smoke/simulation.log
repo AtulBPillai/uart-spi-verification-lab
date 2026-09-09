@@ -1,0 +1,5 @@
+RESULT uart div=16 tx_frames=1 rx_frames=1 framing_cases=0 checks=1321
+COVER uart_tx_bytes 1 256
+COVER uart_rx_bytes 1 256
+VERIFICATION_PASS uart
+/home/runner/work/uart-spi-verification-lab/uart-spi-verification-lab/tb/tb_uart.sv:98: $finish called at 3303000 (1ps)

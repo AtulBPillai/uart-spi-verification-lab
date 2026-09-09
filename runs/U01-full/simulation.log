@@ -1,0 +1,2 @@
+FATAL: /home/runner/work/uart-spi-verification-lab/uart-spi-verification-lab/tb/tb_uart.sv:21: ASSERTION TX framing, bit order, and divider t=1877000
+       Time: 1877000  Scope: tb_uart.check

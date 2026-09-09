@@ -1,0 +1,328 @@
+
+-- Running command `read_verilog rtl/uart_rx.v; hierarchy -check -top uart_rx; proc; opt; check -assert; stat' --
+
+1. Executing Verilog-2005 frontend: rtl/uart_rx.v
+Parsing Verilog input from `rtl/uart_rx.v' to AST representation.
+Generating RTLIL representation for module `\uart_rx'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \uart_rx
+
+2.2. Analyzing design hierarchy..
+Top module:  \uart_rx
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 8 switch rules as full_case in process $proc$rtl/uart_rx.v:23$7 in module uart_rx.
+Marked 1 switch rules as full_case in process $proc$rtl/uart_rx.v:19$5 in module uart_rx.
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 4 redundant assignments.
+Promoted 5 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~11 debug messages>
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\uart_rx.$proc$rtl/uart_rx.v:23$7'.
+     1/18: $3$lookahead\shift$6[7:0]$28
+     2/18: $3$bitselwrite$sel$rtl/uart_rx.v:39$3[2:0]$27
+     3/18: $3$bitselwrite$data$rtl/uart_rx.v:39$2[7:0]$26
+     4/18: $3$bitselwrite$mask$rtl/uart_rx.v:39$1[7:0]$25
+     5/18: $2$lookahead\shift$6[7:0]$19
+     6/18: $2$bitselwrite$sel$rtl/uart_rx.v:39$3[2:0]$18
+     7/18: $2$bitselwrite$data$rtl/uart_rx.v:39$2[7:0]$17
+     8/18: $2$bitselwrite$mask$rtl/uart_rx.v:39$1[7:0]$16
+     9/18: $0\framing_error[0:0]
+    10/18: $0\valid[0:0]
+    11/18: $1$lookahead\shift$6[7:0]$15
+    12/18: $1$bitselwrite$sel$rtl/uart_rx.v:39$3[2:0]$14
+    13/18: $1$bitselwrite$data$rtl/uart_rx.v:39$2[7:0]$13
+    14/18: $1$bitselwrite$mask$rtl/uart_rx.v:39$1[7:0]$12
+    15/18: $0\bit_index[2:0]
+    16/18: $0\timer[3:0]
+    17/18: $0\state[2:0]
+    18/18: $0\data[7:0]
+Creating decoders for process `\uart_rx.$proc$rtl/uart_rx.v:19$5'.
+     1/2: $0\rx_sync[0:0]
+     2/2: $0\rx_meta[0:0]
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\uart_rx.\data' using process `\uart_rx.$proc$rtl/uart_rx.v:23$7'.
+  created $dff cell `$procdff$254' with positive edge clock.
+Creating register for signal `\uart_rx.\valid' using process `\uart_rx.$proc$rtl/uart_rx.v:23$7'.
+  created $dff cell `$procdff$255' with positive edge clock.
+Creating register for signal `\uart_rx.\framing_error' using process `\uart_rx.$proc$rtl/uart_rx.v:23$7'.
+  created $dff cell `$procdff$256' with positive edge clock.
+Creating register for signal `\uart_rx.\state' using process `\uart_rx.$proc$rtl/uart_rx.v:23$7'.
+  created $dff cell `$procdff$257' with positive edge clock.
+Creating register for signal `\uart_rx.\timer' using process `\uart_rx.$proc$rtl/uart_rx.v:23$7'.
+  created $dff cell `$procdff$258' with positive edge clock.
+Creating register for signal `\uart_rx.\bit_index' using process `\uart_rx.$proc$rtl/uart_rx.v:23$7'.
+  created $dff cell `$procdff$259' with positive edge clock.
+Creating register for signal `\uart_rx.\shift' using process `\uart_rx.$proc$rtl/uart_rx.v:23$7'.
+  created $dff cell `$procdff$260' with positive edge clock.
+Creating register for signal `\uart_rx.$bitselwrite$mask$rtl/uart_rx.v:39$1' using process `\uart_rx.$proc$rtl/uart_rx.v:23$7'.
+  created $dff cell `$procdff$261' with positive edge clock.
+Creating register for signal `\uart_rx.$bitselwrite$data$rtl/uart_rx.v:39$2' using process `\uart_rx.$proc$rtl/uart_rx.v:23$7'.
+  created $dff cell `$procdff$262' with positive edge clock.
+Creating register for signal `\uart_rx.$bitselwrite$sel$rtl/uart_rx.v:39$3' using process `\uart_rx.$proc$rtl/uart_rx.v:23$7'.
+  created $dff cell `$procdff$263' with positive edge clock.
+Creating register for signal `\uart_rx.$lookahead\shift$6' using process `\uart_rx.$proc$rtl/uart_rx.v:23$7'.
+  created $dff cell `$procdff$264' with positive edge clock.
+Creating register for signal `\uart_rx.\rx_meta' using process `\uart_rx.$proc$rtl/uart_rx.v:19$5'.
+  created $dff cell `$procdff$265' with positive edge clock.
+Creating register for signal `\uart_rx.\rx_sync' using process `\uart_rx.$proc$rtl/uart_rx.v:19$5'.
+  created $dff cell `$procdff$266' with positive edge clock.
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 10 empty switches in `\uart_rx.$proc$rtl/uart_rx.v:23$7'.
+Removing empty process `uart_rx.$proc$rtl/uart_rx.v:23$7'.
+Found and cleaned up 1 empty switch in `\uart_rx.$proc$rtl/uart_rx.v:19$5'.
+Removing empty process `uart_rx.$proc$rtl/uart_rx.v:19$5'.
+Cleaned up 11 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module uart_rx.
+<suppressed ~12 debug messages>
+
+4. Executing OPT pass (performing simple optimizations).
+
+4.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module uart_rx.
+<suppressed ~2 debug messages>
+
+4.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\uart_rx'.
+<suppressed ~78 debug messages>
+Removed a total of 26 cells.
+
+4.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \uart_rx..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$156.
+    dead port 2/2 on $mux $procmux$156.
+    dead port 1/2 on $mux $procmux$153.
+    dead port 2/2 on $mux $procmux$153.
+    dead port 1/2 on $mux $procmux$150.
+    dead port 2/2 on $mux $procmux$150.
+    dead port 1/2 on $mux $procmux$118.
+    dead port 2/2 on $mux $procmux$118.
+    dead port 1/2 on $mux $procmux$115.
+    dead port 2/2 on $mux $procmux$115.
+    dead port 1/2 on $mux $procmux$110.
+    dead port 2/2 on $mux $procmux$110.
+    dead port 1/2 on $mux $procmux$107.
+    dead port 2/2 on $mux $procmux$107.
+    dead port 1/2 on $mux $procmux$102.
+    dead port 2/2 on $mux $procmux$102.
+    dead port 1/2 on $mux $procmux$99.
+    dead port 2/2 on $mux $procmux$99.
+    dead port 1/2 on $mux $procmux$94.
+    dead port 1/2 on $mux $procmux$86.
+    dead port 2/2 on $mux $procmux$86.
+    dead port 1/2 on $mux $procmux$83.
+    dead port 2/2 on $mux $procmux$83.
+    dead port 1/2 on $mux $procmux$81.
+    dead port 2/2 on $mux $procmux$81.
+    dead port 1/2 on $mux $procmux$75.
+    dead port 2/2 on $mux $procmux$75.
+    dead port 1/2 on $mux $procmux$72.
+    dead port 2/2 on $mux $procmux$72.
+    dead port 1/2 on $mux $procmux$70.
+    dead port 2/2 on $mux $procmux$70.
+    dead port 1/2 on $mux $procmux$64.
+    dead port 2/2 on $mux $procmux$64.
+    dead port 1/2 on $mux $procmux$61.
+    dead port 2/2 on $mux $procmux$61.
+    dead port 1/2 on $mux $procmux$59.
+    dead port 2/2 on $mux $procmux$59.
+    dead port 1/2 on $mux $procmux$53.
+    dead port 2/2 on $mux $procmux$50.
+Removed 39 multiplexer ports.
+<suppressed ~9 debug messages>
+
+4.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \uart_rx.
+Performed a total of 0 changes.
+
+4.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\uart_rx'.
+Removed a total of 0 cells.
+
+4.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $procdff$266 ($dff) from module uart_rx (D = \rx_meta, Q = \rx_sync, rval = 1'1).
+Adding SRST signal on $procdff$258 ($dff) from module uart_rx (D = $procmux$184_Y, Q = \timer, rval = 4'0000).
+Adding EN signal on $auto$ff.cc:266:slice$268 ($sdff) from module uart_rx (D = $procmux$184_Y, Q = \timer).
+Adding SRST signal on $procdff$259 ($dff) from module uart_rx (D = $procmux$167_Y, Q = \bit_index, rval = 3'000).
+Adding EN signal on $auto$ff.cc:266:slice$280 ($sdff) from module uart_rx (D = $procmux$167_Y, Q = \bit_index).
+Adding SRST signal on $procdff$260 ($dff) from module uart_rx (D = $2$lookahead\shift$6[7:0]$19, Q = \shift, rval = 8'00000000).
+Adding SRST signal on $procdff$265 ($dff) from module uart_rx (D = \rx, Q = \rx_meta, rval = 1'1).
+Adding SRST signal on $procdff$254 ($dff) from module uart_rx (D = $procmux$243_Y, Q = \data, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:266:slice$296 ($sdff) from module uart_rx (D = \shift, Q = \data).
+Adding SRST signal on $procdff$255 ($dff) from module uart_rx (D = $procmux$136_Y, Q = \valid, rval = 1'0).
+Adding SRST signal on $procdff$256 ($dff) from module uart_rx (D = $procmux$123_Y, Q = \framing_error, rval = 1'0).
+Adding SRST signal on $procdff$257 ($dff) from module uart_rx (D = $procmux$206_Y, Q = \state, rval = 3'000).
+Adding EN signal on $auto$ff.cc:266:slice$312 ($sdff) from module uart_rx (D = $procmux$206_Y, Q = \state).
+Setting constant 1-bit at position 0 on $procdff$263 ($dff) from module uart_rx.
+Setting constant 1-bit at position 1 on $procdff$263 ($dff) from module uart_rx.
+Setting constant 1-bit at position 2 on $procdff$263 ($dff) from module uart_rx.
+Setting constant 1-bit at position 0 on $procdff$264 ($dff) from module uart_rx.
+Setting constant 1-bit at position 1 on $procdff$264 ($dff) from module uart_rx.
+Setting constant 1-bit at position 2 on $procdff$264 ($dff) from module uart_rx.
+Setting constant 1-bit at position 3 on $procdff$264 ($dff) from module uart_rx.
+Setting constant 1-bit at position 4 on $procdff$264 ($dff) from module uart_rx.
+Setting constant 1-bit at position 5 on $procdff$264 ($dff) from module uart_rx.
+Setting constant 1-bit at position 6 on $procdff$264 ($dff) from module uart_rx.
+Setting constant 1-bit at position 7 on $procdff$264 ($dff) from module uart_rx.
+
+4.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \uart_rx..
+Removed 17 unused cells and 141 unused wires.
+<suppressed ~19 debug messages>
+
+4.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module uart_rx.
+<suppressed ~2 debug messages>
+
+4.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \uart_rx..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~6 debug messages>
+
+4.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \uart_rx.
+Performed a total of 0 changes.
+
+4.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\uart_rx'.
+<suppressed ~18 debug messages>
+Removed a total of 6 cells.
+
+4.13. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $auto$ff.cc:266:slice$294 ($sdff) from module uart_rx (D = $or$rtl/uart_rx.v:0$39_Y, Q = \shift).
+
+4.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \uart_rx..
+Removed 2 unused cells and 8 unused wires.
+<suppressed ~3 debug messages>
+
+4.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module uart_rx.
+
+4.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \uart_rx..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~5 debug messages>
+
+4.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \uart_rx.
+Performed a total of 0 changes.
+
+4.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\uart_rx'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+4.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \uart_rx..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+4.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module uart_rx.
+
+4.23. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.24. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \uart_rx..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~5 debug messages>
+
+4.25. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \uart_rx.
+Performed a total of 0 changes.
+
+4.26. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\uart_rx'.
+Removed a total of 0 cells.
+
+4.27. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.28. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \uart_rx..
+
+4.29. Executing OPT_EXPR pass (perform const folding).
+Optimizing module uart_rx.
+
+4.30. Finished OPT passes. (There is nothing left to do.)
+
+5. Executing CHECK pass (checking for obvious problems).
+Checking module uart_rx...
+Found and reported 0 problems.
+
+6. Printing statistics.
+
+=== uart_rx ===
+
+   Number of wires:                 69
+   Number of wire bits:            207
+   Number of public wires:          13
+   Number of public wire bits:      34
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 66
+     $add                            1
+     $and                            1
+     $eq                             5
+     $logic_not                      1
+     $mux                           19
+     $ne                             9
+     $neg                            1
+     $not                            3
+     $or                             1
+     $pmux                           3
+     $reduce_and                     5
+     $reduce_bool                    4
+     $reduce_or                      1
+     $sdff                           4
+     $sdffe                          5
+     $shift                          2
+     $sub                            1
+

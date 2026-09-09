@@ -1,0 +1,2 @@
+FATAL: /home/runner/work/uart-spi-verification-lab/uart-spi-verification-lab/tb/tb_spi.sv:22: ASSERTION SPI target observed correct MOSI bits t=805000
+       Time: 805000  Scope: tb_spi.check

@@ -1,0 +1,2 @@
+FATAL: /home/runner/work/uart-spi-verification-lab/uart-spi-verification-lab/tb/tb_spi.sv:22: ASSERTION SPI received independent target response t=777000
+       Time: 777000  Scope: tb_spi.check

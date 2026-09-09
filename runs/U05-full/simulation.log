@@ -1,0 +1,5 @@
+COVER uart_busy_request 1 1
+COVER uart_back_to_back 1 1
+COVER uart_period_offsets 2 2
+FATAL: /home/runner/work/uart-spi-verification-lab/uart-spi-verification-lab/tb/tb_uart.sv:21: ASSERTION RX bad stop does not produce valid data t=831773000
+       Time: 831773000  Scope: tb_uart.check

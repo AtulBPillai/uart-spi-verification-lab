@@ -1,0 +1,9 @@
+VCD info: dumpfile /home/runner/work/uart-spi-verification-lab/uart-spi-verification-lab/build/evidence/runs/spi-waves/spi.vcd opened for output.
+RESULT spi transfers=4 checks=420
+COVER spi_mode0_bytes 1 256
+COVER spi_mode1_bytes 1 256
+COVER spi_mode2_bytes 1 256
+COVER spi_mode3_bytes 1 256
+COVER spi_mode_divider_cross 0 12
+VERIFICATION_PASS spi
+/home/runner/work/uart-spi-verification-lab/uart-spi-verification-lab/tb/tb_spi.sv:97: $finish called at 2910000 (1ps)

@@ -1,0 +1,2 @@
+FATAL: /home/runner/work/uart-spi-verification-lab/uart-spi-verification-lab/tb/tb_spi.sv:22: ASSERTION SPI exactly eight full clock cycles t=415000
+       Time: 415000  Scope: tb_spi.check

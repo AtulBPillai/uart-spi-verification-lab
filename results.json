@@ -1,0 +1,832 @@
+{
+  "schema_version": 1,
+  "evidence_type": "executed_digital_rtl_simulation",
+  "owner": "Atul Biju Pillai",
+  "commit": "8af8a15c5259af2a0c6e36de1b241f307914cd98",
+  "workflow_url": "https://github.com/AtulBPillai/uart-spi-verification-lab/actions/runs/34342890439",
+  "source_sha256": {
+    "rtl/spi_master.v": "d9f450c98c1224a30be6e63f0fa344e3cb56bc33cdd6b8cb58b1ea9f18107545",
+    "rtl/uart_rx.v": "61172bd23f77139e0a221651ce95500603bd001c92d4df5a03366103b2992331",
+    "rtl/uart_tx.v": "ec9e7f391abe5db3024fc23f74f518cdd614bbcaba9be73b5847f7439fbc9761",
+    "tb/tb_spi.sv": "fc06deb5537b1235128e3a4363fe27287d234e32f4e44495fbc5e930b12aa215",
+    "tb/tb_uart.sv": "9cf256c55a9e834835f5902ba630174d125ac3d139c2ad025048f90b9c6582a6",
+    "scripts/plot_evidence.py": "f4fde7744593e57d5af77281315f42ff9ca9bef1159141905d97df9d5a13604d",
+    "scripts/publish_evidence.py": "55a5c78c7c2de817f5649d11dfcb68c050d4de5b2519e923bc43ec2023f29c96",
+    "scripts/run.py": "c80ae3991054c8535f092efad97dcb65decd664b61507c5fdc073dc44e4f92fc",
+    "tests/test_publish.py": "087f898e12c5397e188b1ab9bbce73ec172b7d0e5c93013d18caad407f5ddab4",
+    "tests/test_runner.py": "736cc3e1f4c46f8195a5a927d8ec8a25c1e58e08da82e2cb477751525a89eab4",
+    "tests/test_vcd.py": "9749ad400bc6da7873f7d705aa22f8b774d8d3515d6e21be457094a051de3abe"
+  },
+  "baseline": [
+    {
+      "name": "uart-full-div16",
+      "scope": "uart",
+      "mode": "full",
+      "divider": 16,
+      "outcome": "PASS",
+      "coverage": [
+        {
+          "name": "uart_busy_request",
+          "hit": 1,
+          "total": 1
+        },
+        {
+          "name": "uart_back_to_back",
+          "hit": 1,
+          "total": 1
+        },
+        {
+          "name": "uart_period_offsets",
+          "hit": 2,
+          "total": 2
+        },
+        {
+          "name": "uart_bad_stop",
+          "hit": 1,
+          "total": 1
+        },
+        {
+          "name": "uart_false_start",
+          "hit": 1,
+          "total": 1
+        },
+        {
+          "name": "uart_break_recovery",
+          "hit": 1,
+          "total": 1
+        },
+        {
+          "name": "uart_reset_abort",
+          "hit": 1,
+          "total": 1
+        },
+        {
+          "name": "uart_tx_bytes",
+          "hit": 256,
+          "total": 256
+        },
+        {
+          "name": "uart_rx_bytes",
+          "hit": 256,
+          "total": 256
+        }
+      ],
+      "metrics": {
+        "div": 16,
+        "tx_frames": 258,
+        "rx_frames": 260,
+        "framing_cases": 1,
+        "checks": 422426
+      },
+      "assertion": null,
+      "log": "runs/uart-full-div16/simulation.log",
+      "compile_log": "runs/uart-full-div16/compile.log"
+    },
+    {
+      "name": "uart-full-div17",
+      "scope": "uart",
+      "mode": "full",
+      "divider": 17,
+      "outcome": "PASS",
+      "coverage": [
+        {
+          "name": "uart_busy_request",
+          "hit": 1,
+          "total": 1
+        },
+        {
+          "name": "uart_back_to_back",
+          "hit": 1,
+          "total": 1
+        },
+        {
+          "name": "uart_period_offsets",
+          "hit": 2,
+          "total": 2
+        },
+        {
+          "name": "uart_bad_stop",
+          "hit": 1,
+          "total": 1
+        },
+        {
+          "name": "uart_false_start",
+          "hit": 1,
+          "total": 1
+        },
+        {
+          "name": "uart_break_recovery",
+          "hit": 1,
+          "total": 1
+        },
+        {
+          "name": "uart_reset_abort",
+          "hit": 1,
+          "total": 1
+        },
+        {
+          "name": "uart_tx_bytes",
+          "hit": 256,
+          "total": 256
+        },
+        {
+          "name": "uart_rx_bytes",
+          "hit": 256,
+          "total": 256
+        }
+      ],
+      "metrics": {
+        "div": 17,
+        "tx_frames": 258,
+        "rx_frames": 260,
+        "framing_cases": 1,
+        "checks": 448614
+      },
+      "assertion": null,
+      "log": "runs/uart-full-div17/simulation.log",
+      "compile_log": "runs/uart-full-div17/compile.log"
+    },
+    {
+      "name": "uart-full-div32",
+      "scope": "uart",
+      "mode": "full",
+      "divider": 32,
+      "outcome": "PASS",
+      "coverage": [
+        {
+          "name": "uart_busy_request",
+          "hit": 1,
+          "total": 1
+        },
+        {
+          "name": "uart_back_to_back",
+          "hit": 1,
+          "total": 1
+        },
+        {
+          "name": "uart_period_offsets",
+          "hit": 2,
+          "total": 2
+        },
+        {
+          "name": "uart_bad_stop",
+          "hit": 1,
+          "total": 1
+        },
+        {
+          "name": "uart_false_start",
+          "hit": 1,
+          "total": 1
+        },
+        {
+          "name": "uart_break_recovery",
+          "hit": 1,
+          "total": 1
+        },
+        {
+          "name": "uart_reset_abort",
+          "hit": 1,
+          "total": 1
+        },
+        {
+          "name": "uart_tx_bytes",
+          "hit": 256,
+          "total": 256
+        },
+        {
+          "name": "uart_rx_bytes",
+          "hit": 256,
+          "total": 256
+        }
+      ],
+      "metrics": {
+        "div": 32,
+        "tx_frames": 258,
+        "rx_frames": 260,
+        "framing_cases": 1,
+        "checks": 841450
+      },
+      "assertion": null,
+      "log": "runs/uart-full-div32/simulation.log",
+      "compile_log": "runs/uart-full-div32/compile.log"
+    },
+    {
+      "name": "spi-full",
+      "scope": "spi",
+      "mode": "full",
+      "divider": null,
+      "outcome": "PASS",
+      "coverage": [
+        {
+          "name": "spi_busy_config_latch",
+          "hit": 4,
+          "total": 4
+        },
+        {
+          "name": "spi_invalid_divider",
+          "hit": 2,
+          "total": 2
+        },
+        {
+          "name": "spi_reset_abort",
+          "hit": 1,
+          "total": 1
+        },
+        {
+          "name": "spi_mode0_bytes",
+          "hit": 256,
+          "total": 256
+        },
+        {
+          "name": "spi_mode1_bytes",
+          "hit": 256,
+          "total": 256
+        },
+        {
+          "name": "spi_mode2_bytes",
+          "hit": 256,
+          "total": 256
+        },
+        {
+          "name": "spi_mode3_bytes",
+          "hit": 256,
+          "total": 256
+        },
+        {
+          "name": "spi_mode_divider_cross",
+          "hit": 12,
+          "total": 12
+        }
+      ],
+      "metrics": {
+        "transfers": 3077,
+        "checks": 319990
+      },
+      "assertion": null,
+      "log": "runs/spi-full/simulation.log",
+      "compile_log": "runs/spi-full/compile.log"
+    },
+    {
+      "name": "uart-smoke",
+      "scope": "uart",
+      "mode": "smoke",
+      "divider": 16,
+      "outcome": "PASS",
+      "coverage": [
+        {
+          "name": "uart_tx_bytes",
+          "hit": 1,
+          "total": 256
+        },
+        {
+          "name": "uart_rx_bytes",
+          "hit": 1,
+          "total": 256
+        }
+      ],
+      "metrics": {
+        "div": 16,
+        "tx_frames": 1,
+        "rx_frames": 1,
+        "framing_cases": 0,
+        "checks": 1321
+      },
+      "assertion": null,
+      "log": "runs/uart-smoke/simulation.log",
+      "compile_log": "runs/uart-smoke/compile.log"
+    },
+    {
+      "name": "spi-smoke",
+      "scope": "spi",
+      "mode": "smoke",
+      "divider": null,
+      "outcome": "PASS",
+      "coverage": [
+        {
+          "name": "spi_mode0_bytes",
+          "hit": 1,
+          "total": 256
+        },
+        {
+          "name": "spi_mode1_bytes",
+          "hit": 0,
+          "total": 256
+        },
+        {
+          "name": "spi_mode2_bytes",
+          "hit": 0,
+          "total": 256
+        },
+        {
+          "name": "spi_mode3_bytes",
+          "hit": 0,
+          "total": 256
+        },
+        {
+          "name": "spi_mode_divider_cross",
+          "hit": 0,
+          "total": 12
+        }
+      ],
+      "metrics": {
+        "transfers": 1,
+        "checks": 91
+      },
+      "assertion": null,
+      "log": "runs/spi-smoke/simulation.log",
+      "compile_log": "runs/spi-smoke/compile.log"
+    }
+  ],
+  "mutations": [
+    {
+      "id": "U01",
+      "scope": "uart",
+      "file": "uart_tx.v",
+      "description": "Reverse TX payload bit order",
+      "old": "frame <= {1'b1, data, 1'b0};",
+      "new": "frame <= {1'b1, data[0], data[1], data[2], data[3], data[4], data[5], data[6], data[7], 1'b0};",
+      "count": 1,
+      "smoke": {
+        "name": "U01-smoke",
+        "scope": "uart",
+        "mode": "smoke",
+        "divider": 16,
+        "outcome": "SURVIVED",
+        "coverage": [
+          {
+            "name": "uart_tx_bytes",
+            "hit": 1,
+            "total": 256
+          },
+          {
+            "name": "uart_rx_bytes",
+            "hit": 1,
+            "total": 256
+          }
+        ],
+        "metrics": {
+          "div": 16,
+          "tx_frames": 1,
+          "rx_frames": 1,
+          "framing_cases": 0,
+          "checks": 1321
+        },
+        "assertion": null,
+        "log": "runs/U01-smoke/simulation.log",
+        "compile_log": "runs/U01-smoke/compile.log"
+      },
+      "full": {
+        "name": "U01-full",
+        "scope": "uart",
+        "mode": "full",
+        "divider": 16,
+        "outcome": "DETECTED",
+        "coverage": [],
+        "metrics": {},
+        "assertion": "FATAL: /home/runner/work/uart-spi-verification-lab/uart-spi-verification-lab/tb/tb_uart.sv:21: ASSERTION TX framing, bit order, and divider t=1877000",
+        "log": "runs/U01-full/simulation.log",
+        "compile_log": "runs/U01-full/compile.log"
+      }
+    },
+    {
+      "id": "U02",
+      "scope": "uart",
+      "file": "uart_tx.v",
+      "description": "Drive a LOW stop bit",
+      "old": "frame <= {1'b1, data, 1'b0};",
+      "new": "frame <= {1'b0, data, 1'b0};",
+      "count": 1,
+      "smoke": {
+        "name": "U02-smoke",
+        "scope": "uart",
+        "mode": "smoke",
+        "divider": 16,
+        "outcome": "DETECTED",
+        "coverage": [],
+        "metrics": {},
+        "assertion": "FATAL: /home/runner/work/uart-spi-verification-lab/uart-spi-verification-lab/tb/tb_uart.sv:21: ASSERTION TX framing, bit order, and divider t=1617000",
+        "log": "runs/U02-smoke/simulation.log",
+        "compile_log": "runs/U02-smoke/compile.log"
+      },
+      "full": {
+        "name": "U02-full",
+        "scope": "uart",
+        "mode": "full",
+        "divider": 16,
+        "outcome": "DETECTED",
+        "coverage": [],
+        "metrics": {},
+        "assertion": "FATAL: /home/runner/work/uart-spi-verification-lab/uart-spi-verification-lab/tb/tb_uart.sv:21: ASSERTION TX framing, bit order, and divider t=1537000",
+        "log": "runs/U02-full/simulation.log",
+        "compile_log": "runs/U02-full/compile.log"
+      }
+    },
+    {
+      "id": "U03",
+      "scope": "uart",
+      "file": "uart_tx.v",
+      "description": "Reload TX timer one count too high",
+      "old": "timer <= CLKS_PER_BIT - 1;",
+      "new": "timer <= CLKS_PER_BIT;",
+      "count": 2,
+      "smoke": {
+        "name": "U03-smoke",
+        "scope": "uart",
+        "mode": "smoke",
+        "divider": 16,
+        "outcome": "DETECTED",
+        "coverage": [],
+        "metrics": {},
+        "assertion": "FATAL: /home/runner/work/uart-spi-verification-lab/uart-spi-verification-lab/tb/tb_uart.sv:21: ASSERTION TX framing, bit order, and divider t=337000",
+        "log": "runs/U03-smoke/simulation.log",
+        "compile_log": "runs/U03-smoke/compile.log"
+      },
+      "full": {
+        "name": "U03-full",
+        "scope": "uart",
+        "mode": "full",
+        "divider": 16,
+        "outcome": "DETECTED",
+        "coverage": [],
+        "metrics": {},
+        "assertion": "FATAL: /home/runner/work/uart-spi-verification-lab/uart-spi-verification-lab/tb/tb_uart.sv:21: ASSERTION TX framing, bit order, and divider t=187000",
+        "log": "runs/U03-full/simulation.log",
+        "compile_log": "runs/U03-full/compile.log"
+      }
+    },
+    {
+      "id": "U04",
+      "scope": "uart",
+      "file": "uart_tx.v",
+      "description": "Accept a new TX request while busy",
+      "old": "if (valid && ready) begin",
+      "new": "if (valid) begin",
+      "count": 1,
+      "smoke": {
+        "name": "U04-smoke",
+        "scope": "uart",
+        "mode": "smoke",
+        "divider": 16,
+        "outcome": "SURVIVED",
+        "coverage": [
+          {
+            "name": "uart_tx_bytes",
+            "hit": 1,
+            "total": 256
+          },
+          {
+            "name": "uart_rx_bytes",
+            "hit": 1,
+            "total": 256
+          }
+        ],
+        "metrics": {
+          "div": 16,
+          "tx_frames": 1,
+          "rx_frames": 1,
+          "framing_cases": 0,
+          "checks": 1321
+        },
+        "assertion": null,
+        "log": "runs/U04-smoke/simulation.log",
+        "compile_log": "runs/U04-smoke/compile.log"
+      },
+      "full": {
+        "name": "U04-full",
+        "scope": "uart",
+        "mode": "full",
+        "divider": 16,
+        "outcome": "DETECTED",
+        "coverage": [],
+        "metrics": {},
+        "assertion": "FATAL: /home/runner/work/uart-spi-verification-lab/uart-spi-verification-lab/tb/tb_uart.sv:21: ASSERTION TX framing, bit order, and divider t=415307000",
+        "log": "runs/U04-full/simulation.log",
+        "compile_log": "runs/U04-full/compile.log"
+      }
+    },
+    {
+      "id": "U05",
+      "scope": "uart",
+      "file": "uart_rx.v",
+      "description": "Accept an invalid LOW stop bit",
+      "old": "if (rx_sync) begin data <= shift; valid <= 1; state <= IDLE; end",
+      "new": "if (1'b1) begin data <= shift; valid <= 1; state <= IDLE; end",
+      "count": 1,
+      "smoke": {
+        "name": "U05-smoke",
+        "scope": "uart",
+        "mode": "smoke",
+        "divider": 16,
+        "outcome": "SURVIVED",
+        "coverage": [
+          {
+            "name": "uart_tx_bytes",
+            "hit": 1,
+            "total": 256
+          },
+          {
+            "name": "uart_rx_bytes",
+            "hit": 1,
+            "total": 256
+          }
+        ],
+        "metrics": {
+          "div": 16,
+          "tx_frames": 1,
+          "rx_frames": 1,
+          "framing_cases": 0,
+          "checks": 1321
+        },
+        "assertion": null,
+        "log": "runs/U05-smoke/simulation.log",
+        "compile_log": "runs/U05-smoke/compile.log"
+      },
+      "full": {
+        "name": "U05-full",
+        "scope": "uart",
+        "mode": "full",
+        "divider": 16,
+        "outcome": "DETECTED",
+        "coverage": [
+          {
+            "name": "uart_busy_request",
+            "hit": 1,
+            "total": 1
+          },
+          {
+            "name": "uart_back_to_back",
+            "hit": 1,
+            "total": 1
+          },
+          {
+            "name": "uart_period_offsets",
+            "hit": 2,
+            "total": 2
+          }
+        ],
+        "metrics": {},
+        "assertion": "FATAL: /home/runner/work/uart-spi-verification-lab/uart-spi-verification-lab/tb/tb_uart.sv:21: ASSERTION RX bad stop does not produce valid data t=831773000",
+        "log": "runs/U05-full/simulation.log",
+        "compile_log": "runs/U05-full/compile.log"
+      }
+    },
+    {
+      "id": "U06",
+      "scope": "uart",
+      "file": "uart_rx.v",
+      "description": "Reverse RX payload bit order",
+      "old": "shift[bit_index] <= rx_sync;",
+      "new": "shift[7-bit_index] <= rx_sync;",
+      "count": 1,
+      "smoke": {
+        "name": "U06-smoke",
+        "scope": "uart",
+        "mode": "smoke",
+        "divider": 16,
+        "outcome": "SURVIVED",
+        "coverage": [
+          {
+            "name": "uart_tx_bytes",
+            "hit": 1,
+            "total": 256
+          },
+          {
+            "name": "uart_rx_bytes",
+            "hit": 1,
+            "total": 256
+          }
+        ],
+        "metrics": {
+          "div": 16,
+          "tx_frames": 1,
+          "rx_frames": 1,
+          "framing_cases": 0,
+          "checks": 1321
+        },
+        "assertion": null,
+        "log": "runs/U06-smoke/simulation.log",
+        "compile_log": "runs/U06-smoke/compile.log"
+      },
+      "full": {
+        "name": "U06-full",
+        "scope": "uart",
+        "mode": "full",
+        "divider": 16,
+        "outcome": "DETECTED",
+        "coverage": [
+          {
+            "name": "uart_busy_request",
+            "hit": 1,
+            "total": 1
+          }
+        ],
+        "metrics": {},
+        "assertion": "FATAL: /home/runner/work/uart-spi-verification-lab/uart-spi-verification-lab/tb/tb_uart.sv:21: ASSERTION RX payload from independent serial source t=419623000",
+        "log": "runs/U06-full/simulation.log",
+        "compile_log": "runs/U06-full/compile.log"
+      }
+    },
+    {
+      "id": "S01",
+      "scope": "spi",
+      "file": "spi_master.v",
+      "description": "Sample MISO on the opposite edge",
+      "old": "phase ? edge_count[0] : !edge_count[0]",
+      "new": "phase ? !edge_count[0] : edge_count[0]",
+      "count": 1,
+      "smoke": {
+        "name": "S01-smoke",
+        "scope": "spi",
+        "mode": "smoke",
+        "divider": null,
+        "outcome": "SURVIVED",
+        "coverage": [
+          {
+            "name": "spi_mode0_bytes",
+            "hit": 1,
+            "total": 256
+          },
+          {
+            "name": "spi_mode1_bytes",
+            "hit": 0,
+            "total": 256
+          },
+          {
+            "name": "spi_mode2_bytes",
+            "hit": 0,
+            "total": 256
+          },
+          {
+            "name": "spi_mode3_bytes",
+            "hit": 0,
+            "total": 256
+          },
+          {
+            "name": "spi_mode_divider_cross",
+            "hit": 0,
+            "total": 12
+          }
+        ],
+        "metrics": {
+          "transfers": 1,
+          "checks": 91
+        },
+        "assertion": null,
+        "log": "runs/S01-smoke/simulation.log",
+        "compile_log": "runs/S01-smoke/compile.log"
+      },
+      "full": {
+        "name": "S01-full",
+        "scope": "spi",
+        "mode": "full",
+        "divider": null,
+        "outcome": "DETECTED",
+        "coverage": [],
+        "metrics": {},
+        "assertion": "FATAL: /home/runner/work/uart-spi-verification-lab/uart-spi-verification-lab/tb/tb_spi.sv:22: ASSERTION SPI target observed correct MOSI bits t=805000",
+        "log": "runs/S01-full/simulation.log",
+        "compile_log": "runs/S01-full/compile.log"
+      }
+    },
+    {
+      "id": "S02",
+      "scope": "spi",
+      "file": "spi_master.v",
+      "description": "Invert each received MISO bit",
+      "old": "rx_shift <= {rx_shift[6:0], miso};",
+      "new": "rx_shift <= {rx_shift[6:0], ~miso};",
+      "count": 1,
+      "smoke": {
+        "name": "S02-smoke",
+        "scope": "spi",
+        "mode": "smoke",
+        "divider": null,
+        "outcome": "DETECTED",
+        "coverage": [],
+        "metrics": {},
+        "assertion": "FATAL: /home/runner/work/uart-spi-verification-lab/uart-spi-verification-lab/tb/tb_spi.sv:22: ASSERTION SPI received independent target response t=777000",
+        "log": "runs/S02-smoke/simulation.log",
+        "compile_log": "runs/S02-smoke/compile.log"
+      },
+      "full": {
+        "name": "S02-full",
+        "scope": "spi",
+        "mode": "full",
+        "divider": null,
+        "outcome": "DETECTED",
+        "coverage": [],
+        "metrics": {},
+        "assertion": "FATAL: /home/runner/work/uart-spi-verification-lab/uart-spi-verification-lab/tb/tb_spi.sv:22: ASSERTION SPI received independent target response t=437000",
+        "log": "runs/S02-full/simulation.log",
+        "compile_log": "runs/S02-full/compile.log"
+      }
+    },
+    {
+      "id": "S03",
+      "scope": "spi",
+      "file": "spi_master.v",
+      "description": "End SPI transfer one edge early",
+      "old": "if (edge_count == 15)",
+      "new": "if (edge_count == 14)",
+      "count": 1,
+      "smoke": {
+        "name": "S03-smoke",
+        "scope": "spi",
+        "mode": "smoke",
+        "divider": null,
+        "outcome": "DETECTED",
+        "coverage": [],
+        "metrics": {},
+        "assertion": "FATAL: /home/runner/work/uart-spi-verification-lab/uart-spi-verification-lab/tb/tb_spi.sv:22: ASSERTION SPI exactly eight full clock cycles t=735000",
+        "log": "runs/S03-smoke/simulation.log",
+        "compile_log": "runs/S03-smoke/compile.log"
+      },
+      "full": {
+        "name": "S03-full",
+        "scope": "spi",
+        "mode": "full",
+        "divider": null,
+        "outcome": "DETECTED",
+        "coverage": [],
+        "metrics": {},
+        "assertion": "FATAL: /home/runner/work/uart-spi-verification-lab/uart-spi-verification-lab/tb/tb_spi.sv:22: ASSERTION SPI exactly eight full clock cycles t=415000",
+        "log": "runs/S03-full/simulation.log",
+        "compile_log": "runs/S03-full/compile.log"
+      }
+    }
+  ],
+  "waves": [
+    {
+      "name": "uart-waves",
+      "scope": "uart",
+      "mode": "waves",
+      "divider": 16,
+      "outcome": "PASS",
+      "coverage": [
+        {
+          "name": "uart_tx_bytes",
+          "hit": 1,
+          "total": 256
+        },
+        {
+          "name": "uart_rx_bytes",
+          "hit": 1,
+          "total": 256
+        }
+      ],
+      "metrics": {
+        "div": 16,
+        "tx_frames": 1,
+        "rx_frames": 1,
+        "framing_cases": 0,
+        "checks": 1631
+      },
+      "assertion": null,
+      "log": "runs/uart-waves/simulation.log",
+      "compile_log": "runs/uart-waves/compile.log"
+    },
+    {
+      "name": "spi-waves",
+      "scope": "spi",
+      "mode": "waves",
+      "divider": null,
+      "outcome": "PASS",
+      "coverage": [
+        {
+          "name": "spi_mode0_bytes",
+          "hit": 1,
+          "total": 256
+        },
+        {
+          "name": "spi_mode1_bytes",
+          "hit": 1,
+          "total": 256
+        },
+        {
+          "name": "spi_mode2_bytes",
+          "hit": 1,
+          "total": 256
+        },
+        {
+          "name": "spi_mode3_bytes",
+          "hit": 1,
+          "total": 256
+        },
+        {
+          "name": "spi_mode_divider_cross",
+          "hit": 0,
+          "total": 12
+        }
+      ],
+      "metrics": {
+        "transfers": 4,
+        "checks": 420
+      },
+      "assertion": null,
+      "log": "runs/spi-waves/simulation.log",
+      "compile_log": "runs/spi-waves/compile.log"
+    }
+  ],
+  "elapsed_seconds": 4.926,
+  "status": "PASS"
+}

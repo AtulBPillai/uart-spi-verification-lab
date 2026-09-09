@@ -1,0 +1,258 @@
+
+-- Running command `read_verilog rtl/spi_master.v; hierarchy -check -top spi_master; proc; opt; check -assert; stat' --
+
+1. Executing Verilog-2005 frontend: rtl/spi_master.v
+Parsing Verilog input from `rtl/spi_master.v' to AST representation.
+Generating RTLIL representation for module `\spi_master'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \spi_master
+
+2.2. Analyzing design hierarchy..
+Top module:  \spi_master
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 8 switch rules as full_case in process $proc$rtl/spi_master.v:16$6 in module spi_master.
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 2 redundant assignments.
+Promoted 0 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~8 debug messages>
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\spi_master.$proc$rtl/spi_master.v:16$6'.
+     1/15: $0\config_error[0:0]
+     2/15: $0\done[0:0]
+     3/15: $0\rx_shift[7:0]
+     4/15: $0\tx_shift[7:0]
+     5/15: $0\edge_count[4:0]
+     6/15: $0\timer[15:0]
+     7/15: $0\divider[15:0]
+     8/15: $0\finishing[0:0]
+     9/15: $0\phase[0:0]
+    10/15: $0\pol[0:0]
+    11/15: $0\rx_data[7:0]
+    12/15: $0\cs_n[0:0]
+    13/15: $0\mosi[0:0]
+    14/15: $0\sck[0:0]
+    15/15: $0\busy[0:0]
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\spi_master.\busy' using process `\spi_master.$proc$rtl/spi_master.v:16$6'.
+  created $dff cell `$procdff$258' with positive edge clock.
+Creating register for signal `\spi_master.\done' using process `\spi_master.$proc$rtl/spi_master.v:16$6'.
+  created $dff cell `$procdff$259' with positive edge clock.
+Creating register for signal `\spi_master.\config_error' using process `\spi_master.$proc$rtl/spi_master.v:16$6'.
+  created $dff cell `$procdff$260' with positive edge clock.
+Creating register for signal `\spi_master.\sck' using process `\spi_master.$proc$rtl/spi_master.v:16$6'.
+  created $dff cell `$procdff$261' with positive edge clock.
+Creating register for signal `\spi_master.\mosi' using process `\spi_master.$proc$rtl/spi_master.v:16$6'.
+  created $dff cell `$procdff$262' with positive edge clock.
+Creating register for signal `\spi_master.\cs_n' using process `\spi_master.$proc$rtl/spi_master.v:16$6'.
+  created $dff cell `$procdff$263' with positive edge clock.
+Creating register for signal `\spi_master.\rx_data' using process `\spi_master.$proc$rtl/spi_master.v:16$6'.
+  created $dff cell `$procdff$264' with positive edge clock.
+Creating register for signal `\spi_master.\pol' using process `\spi_master.$proc$rtl/spi_master.v:16$6'.
+  created $dff cell `$procdff$265' with positive edge clock.
+Creating register for signal `\spi_master.\phase' using process `\spi_master.$proc$rtl/spi_master.v:16$6'.
+  created $dff cell `$procdff$266' with positive edge clock.
+Creating register for signal `\spi_master.\finishing' using process `\spi_master.$proc$rtl/spi_master.v:16$6'.
+  created $dff cell `$procdff$267' with positive edge clock.
+Creating register for signal `\spi_master.\divider' using process `\spi_master.$proc$rtl/spi_master.v:16$6'.
+  created $dff cell `$procdff$268' with positive edge clock.
+Creating register for signal `\spi_master.\timer' using process `\spi_master.$proc$rtl/spi_master.v:16$6'.
+  created $dff cell `$procdff$269' with positive edge clock.
+Creating register for signal `\spi_master.\edge_count' using process `\spi_master.$proc$rtl/spi_master.v:16$6'.
+  created $dff cell `$procdff$270' with positive edge clock.
+Creating register for signal `\spi_master.\tx_shift' using process `\spi_master.$proc$rtl/spi_master.v:16$6'.
+  created $dff cell `$procdff$271' with positive edge clock.
+Creating register for signal `\spi_master.\rx_shift' using process `\spi_master.$proc$rtl/spi_master.v:16$6'.
+  created $dff cell `$procdff$272' with positive edge clock.
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 8 empty switches in `\spi_master.$proc$rtl/spi_master.v:16$6'.
+Removing empty process `spi_master.$proc$rtl/spi_master.v:16$6'.
+Cleaned up 8 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_master.
+<suppressed ~1 debug messages>
+
+4. Executing OPT pass (performing simple optimizations).
+
+4.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_master.
+
+4.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_master'.
+Removed a total of 0 cells.
+
+4.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \spi_master..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+      Replacing known input bits on port A of cell $procmux$247: \busy -> 1'0
+      Replacing known input bits on port B of cell $procmux$245: \busy -> 1'1
+      Replacing known input bits on port A of cell $procmux$242: \busy -> 1'1
+      Replacing known input bits on port B of cell $procmux$134: \finishing -> 1'1
+      Replacing known input bits on port A of cell $procmux$131: \finishing -> 1'0
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~16 debug messages>
+
+4.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \spi_master.
+Performed a total of 0 changes.
+
+4.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_master'.
+Removed a total of 0 cells.
+
+4.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $procdff$258 ($dff) from module spi_master (D = $procmux$253_Y, Q = \busy, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$273 ($sdff) from module spi_master (D = $procmux$253_Y, Q = \busy).
+Adding SRST signal on $procdff$259 ($dff) from module spi_master (D = $procmux$29_Y, Q = \done, rval = 1'0).
+Adding SRST signal on $procdff$260 ($dff) from module spi_master (D = $procmux$20_Y, Q = \config_error, rval = 1'0).
+Adding SRST signal on $procdff$261 ($dff) from module spi_master (D = $procmux$235_Y, Q = \sck, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$287 ($sdff) from module spi_master (D = $procmux$235_Y, Q = \sck).
+Adding SRST signal on $procdff$262 ($dff) from module spi_master (D = $procmux$217_Y, Q = \mosi, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$295 ($sdff) from module spi_master (D = $procmux$217_Y, Q = \mosi).
+Adding SRST signal on $procdff$263 ($dff) from module spi_master (D = $procmux$196_Y, Q = \cs_n, rval = 1'1).
+Adding EN signal on $auto$ff.cc:266:slice$307 ($sdff) from module spi_master (D = $procmux$196_Y, Q = \cs_n).
+Adding SRST signal on $procdff$264 ($dff) from module spi_master (D = $procmux$178_Y, Q = \rx_data, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:266:slice$319 ($sdff) from module spi_master (D = \rx_shift, Q = \rx_data).
+Adding SRST signal on $procdff$265 ($dff) from module spi_master (D = $procmux$163_Y, Q = \pol, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$327 ($sdff) from module spi_master (D = \cpol, Q = \pol).
+Adding SRST signal on $procdff$266 ($dff) from module spi_master (D = $procmux$154_Y, Q = \phase, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$333 ($sdff) from module spi_master (D = \cpha, Q = \phase).
+Adding SRST signal on $procdff$267 ($dff) from module spi_master (D = $procmux$145_Y, Q = \finishing, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$339 ($sdff) from module spi_master (D = $procmux$145_Y, Q = \finishing).
+Adding SRST signal on $procdff$268 ($dff) from module spi_master (D = $procmux$124_Y, Q = \divider, rval = 16'0000000000000010).
+Adding EN signal on $auto$ff.cc:266:slice$349 ($sdff) from module spi_master (D = \half_period, Q = \divider).
+Adding SRST signal on $procdff$269 ($dff) from module spi_master (D = $procmux$115_Y, Q = \timer, rval = 16'0000000000000000).
+Adding EN signal on $auto$ff.cc:266:slice$355 ($sdff) from module spi_master (D = $procmux$115_Y, Q = \timer).
+Adding SRST signal on $procdff$270 ($dff) from module spi_master (D = $procmux$100_Y, Q = \edge_count, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:266:slice$363 ($sdff) from module spi_master (D = $procmux$100_Y, Q = \edge_count).
+Adding SRST signal on $procdff$271 ($dff) from module spi_master (D = $procmux$79_Y, Q = \tx_shift, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:266:slice$377 ($sdff) from module spi_master (D = $procmux$79_Y, Q = \tx_shift).
+Adding SRST signal on $procdff$272 ($dff) from module spi_master (D = $procmux$58_Y, Q = \rx_shift, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:266:slice$391 ($sdff) from module spi_master (D = $procmux$58_Y, Q = \rx_shift).
+
+4.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_master..
+Removed 29 unused cells and 126 unused wires.
+<suppressed ~30 debug messages>
+
+4.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_master.
+<suppressed ~6 debug messages>
+
+4.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \spi_master..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~12 debug messages>
+
+4.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \spi_master.
+Performed a total of 0 changes.
+
+4.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_master'.
+<suppressed ~87 debug messages>
+Removed a total of 29 cells.
+
+4.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_master..
+Removed 0 unused cells and 29 unused wires.
+<suppressed ~1 debug messages>
+
+4.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_master.
+
+4.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \spi_master..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~13 debug messages>
+
+4.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \spi_master.
+Performed a total of 0 changes.
+
+4.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\spi_master'.
+Removed a total of 0 cells.
+
+4.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \spi_master..
+
+4.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module spi_master.
+
+4.23. Finished OPT passes. (There is nothing left to do.)
+
+5. Executing CHECK pass (checking for obvious problems).
+Checking module spi_master...
+Found and reported 0 problems.
+
+6. Printing statistics.
+
+=== spi_master ===
+
+   Number of wires:                113
+   Number of wire bits:            414
+   Number of public wires:          25
+   Number of public wire bits:     102
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                105
+     $add                            1
+     $eq                             1
+     $logic_and                      2
+     $logic_not                      4
+     $lt                             1
+     $mux                           53
+     $ne                             7
+     $not                            4
+     $reduce_and                    10
+     $reduce_bool                    2
+     $reduce_or                      2
+     $sdff                           2
+     $sdffe                         13
+     $sub                            3
+

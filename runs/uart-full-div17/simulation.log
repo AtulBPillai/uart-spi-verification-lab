@@ -1,0 +1,12 @@
+COVER uart_busy_request 1 1
+COVER uart_back_to_back 1 1
+COVER uart_period_offsets 2 2
+COVER uart_bad_stop 1 1
+COVER uart_false_start 1 1
+COVER uart_break_recovery 1 1
+COVER uart_reset_abort 1 1
+RESULT uart div=17 tx_frames=258 rx_frames=260 framing_cases=1 checks=448614
+COVER uart_tx_bytes 256 256
+COVER uart_rx_bytes 256 256
+VERIFICATION_PASS uart
+/home/runner/work/uart-spi-verification-lab/uart-spi-verification-lab/tb/tb_uart.sv:98: $finish called at 899043000 (1ps)

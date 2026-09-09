@@ -1,0 +1,8 @@
+RESULT spi transfers=1 checks=91
+COVER spi_mode0_bytes 1 256
+COVER spi_mode1_bytes 0 256
+COVER spi_mode2_bytes 0 256
+COVER spi_mode3_bytes 0 256
+COVER spi_mode_divider_cross 0 12
+VERIFICATION_PASS spi
+/home/runner/work/uart-spi-verification-lab/uart-spi-verification-lab/tb/tb_spi.sv:97: $finish called at 780000 (1ps)

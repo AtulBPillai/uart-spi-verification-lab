@@ -1,0 +1,3 @@
+COVER uart_busy_request 1 1
+FATAL: /home/runner/work/uart-spi-verification-lab/uart-spi-verification-lab/tb/tb_uart.sv:21: ASSERTION RX payload from independent serial source t=419623000
+       Time: 419623000  Scope: tb_uart.check

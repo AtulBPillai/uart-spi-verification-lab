@@ -1,0 +1,11 @@
+COVER spi_busy_config_latch 4 4
+COVER spi_invalid_divider 2 2
+COVER spi_reset_abort 1 1
+RESULT spi transfers=3077 checks=319990
+COVER spi_mode0_bytes 256 256
+COVER spi_mode1_bytes 256 256
+COVER spi_mode2_bytes 256 256
+COVER spi_mode3_bytes 256 256
+COVER spi_mode_divider_cross 12 12
+VERIFICATION_PASS spi
+/home/runner/work/uart-spi-verification-lab/uart-spi-verification-lab/tb/tb_spi.sv:97: $finish called at 2184460000 (1ps)
