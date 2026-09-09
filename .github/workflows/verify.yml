@@ -46,7 +46,7 @@ jobs:
           retention-days: 30
           if-no-files-found: error
   publish-evidence:
-    needs: regression
+    needs: [regression, container]
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     runs-on: ubuntu-24.04
     timeout-minutes: 3

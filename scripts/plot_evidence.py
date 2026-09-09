@@ -156,7 +156,7 @@ def spi_plot(source: Path, output: Path, result: dict, plt):
         tx = int(value_at(sig["tb_spi.tx_data"], start), 2)
         rx = int(value_at(sig["tb_spi.rx_data"], end), 2)
         left = start-0.025
-        tracks(ax, vcd, "tb_spi", [("cs_n", "CS_n"), ("sck", "SCK"), ("mosi", "MOSI"), ("miso", "MISO")], left, end+0.02)
+        tracks(ax, vcd, "tb_spi", [("cs_n", "CS_n"), ("sck", "SCK"), ("mosi", "MOSI"), ("miso", "MISO")], left, min(end+0.02, vcd["end_us"]))
         for t, value in sig["tb_spi.sck"]:
             if start < t < end and value in ("0", "1") and int(value) == (pol if phase else 1-pol):
                 ax.axvline(t-left, linestyle="--", color="#72919c", alpha=0.55, linewidth=0.8)
