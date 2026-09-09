@@ -1,0 +1,42 @@
+name: RTL verification
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  regression:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install simulator and synthesis checker
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y iverilog yosys python3-matplotlib
+      - name: Test evidence classification
+        run: python3 -m unittest discover -s tests -v
+      - name: Run baseline, seeded faults and waveform capture
+        run: python3 scripts/run.py
+      - name: Synthesis structural checks
+        run: |
+          mkdir -p build/evidence/synthesis
+          for module in uart_tx uart_rx spi_master; do
+            yosys -Q -T -p "read_verilog rtl/$module.v; hierarchy -check -top $module; proc; opt; check -assert; stat" > "build/evidence/synthesis/$module.log"
+          done
+      - name: Publish run summary
+        if: always()
+        run: |
+          if [ -f build/evidence/SUMMARY.md ]; then
+            cat build/evidence/SUMMARY.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Upload verification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rtl-verification-evidence
+          path: build/evidence/
+          retention-days: 30
+          if-no-files-found: error
