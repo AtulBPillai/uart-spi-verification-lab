@@ -1,5 +1,6 @@
 // UART 8N1 receiver: two-flop synchronization, midpoint sampling, one-cycle events.
-// CLKS_PER_BIT >= 8. No FIFO or receive backpressure. Synchronous active-high reset.
+// Integration contract: CLKS_PER_BIT >= 16. No FIFO or receive backpressure.
+// Synchronous active-high reset. Default regression checks dividers 16, 17 and 32.
 module uart_rx #(
     parameter integer CLKS_PER_BIT = 16
 ) (

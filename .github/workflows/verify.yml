@@ -6,6 +6,9 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: rtl-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
 jobs:
   regression:
     runs-on: ubuntu-24.04
@@ -26,6 +29,8 @@ jobs:
           for module in uart_tx uart_rx spi_master; do
             yosys -Q -T -p "read_verilog rtl/$module.v; hierarchy -check -top $module; proc; opt; check -assert; stat" > "build/evidence/synthesis/$module.log"
           done
+      - name: Render plots from measured VCD and mutation results
+        run: python3 scripts/plot_evidence.py
       - name: Publish run summary
         if: always()
         run: |
@@ -40,3 +45,27 @@ jobs:
           path: build/evidence/
           retention-days: 30
           if-no-files-found: error
+  publish-evidence:
+    needs: regression
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: rtl-verification-evidence
+          path: build/evidence
+      - name: Publish plots and reports to evidence branch
+        run: python3 scripts/publish_evidence.py
+  container:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build documented Docker image
+        run: docker build -t uart-spi-lab .
+      - name: Run documented container entry point
+        run: docker run --rm -v "$PWD/build:/project/build" uart-spi-lab

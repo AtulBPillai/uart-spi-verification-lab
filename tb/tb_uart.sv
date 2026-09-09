@@ -101,7 +101,7 @@ module tb_uart;
     integer k, before_rx, before_error;
     initial begin
         smoke=$test$plusargs("SMOKE"); waves=$test$plusargs("WAVES");
-        if(DIV<8) $fatal(1,"CONFIG CLKS_PER_BIT must be >=8");
+        if(DIV<16) $fatal(1,"CONFIG CLKS_PER_BIT must be >=16");
         if($value$plusargs("VCD=%s",vcd_path)) begin $dumpfile(vcd_path); $dumpvars(0,tb_uart); end
         reset_dut();
         if(waves) begin transmit(8'hA6,0); #3; receive(8'h3C,DIV*10,1); finish_report(); end
