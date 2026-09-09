@@ -2,15 +2,15 @@
   "schema_version": 1,
   "evidence_type": "executed_digital_rtl_simulation",
   "owner": "Atul Biju Pillai",
-  "commit": "8af8a15c5259af2a0c6e36de1b241f307914cd98",
-  "workflow_url": "https://github.com/AtulBPillai/uart-spi-verification-lab/actions/runs/34342890439",
+  "commit": "66a89256dd285250b4b3073d81fe84cfa54db13c",
+  "workflow_url": "https://github.com/AtulBPillai/uart-spi-verification-lab/actions/runs/34343202394",
   "source_sha256": {
     "rtl/spi_master.v": "d9f450c98c1224a30be6e63f0fa344e3cb56bc33cdd6b8cb58b1ea9f18107545",
     "rtl/uart_rx.v": "61172bd23f77139e0a221651ce95500603bd001c92d4df5a03366103b2992331",
     "rtl/uart_tx.v": "ec9e7f391abe5db3024fc23f74f518cdd614bbcaba9be73b5847f7439fbc9761",
     "tb/tb_spi.sv": "fc06deb5537b1235128e3a4363fe27287d234e32f4e44495fbc5e930b12aa215",
     "tb/tb_uart.sv": "9cf256c55a9e834835f5902ba630174d125ac3d139c2ad025048f90b9c6582a6",
-    "scripts/plot_evidence.py": "f4fde7744593e57d5af77281315f42ff9ca9bef1159141905d97df9d5a13604d",
+    "scripts/plot_evidence.py": "2b593a7c77dcd04cdcddaa321998c851b071e24582d2824d100d42d59e04614d",
     "scripts/publish_evidence.py": "55a5c78c7c2de817f5649d11dfcb68c050d4de5b2519e923bc43ec2023f29c96",
     "scripts/run.py": "c80ae3991054c8535f092efad97dcb65decd664b61507c5fdc073dc44e4f92fc",
     "tests/test_publish.py": "087f898e12c5397e188b1ab9bbce73ec172b7d0e5c93013d18caad407f5ddab4",
@@ -827,6 +827,6 @@
       "compile_log": "runs/spi-waves/compile.log"
     }
   ],
-  "elapsed_seconds": 4.926,
+  "elapsed_seconds": 3.447,
   "status": "PASS"
 }

@@ -4,7 +4,7 @@ Project owner: Atul Biju Pillai.
 
 Evidence type: digital RTL simulation; no FPGA or physical-chip measurements.
 
-Source commit: `8af8a15c5259af2a0c6e36de1b241f307914cd98`
+Source commit: `66a89256dd285250b4b3073d81fe84cfa54db13c`
 
 ## Clean regression
 

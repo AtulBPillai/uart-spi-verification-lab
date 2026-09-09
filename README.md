@@ -2,7 +2,7 @@
 
 Project owner: **Atul Biju Pillai**. These plots are generated from executed RTL simulations.
 
-[Design and run instructions](https://github.com/AtulBPillai/uart-spi-verification-lab) · [Source commit](https://github.com/AtulBPillai/uart-spi-verification-lab/commit/8af8a15c5259af2a0c6e36de1b241f307914cd98)
+[Design and run instructions](https://github.com/AtulBPillai/uart-spi-verification-lab) · [Source commit](https://github.com/AtulBPillai/uart-spi-verification-lab/commit/66a89256dd285250b4b3073d81fe84cfa54db13c)
 
 ![UART framing and receive waveform](figures/uart-waveforms.png)
 
@@ -16,7 +16,7 @@ Project owner: Atul Biju Pillai.
 
 Evidence type: digital RTL simulation; no FPGA or physical-chip measurements.
 
-Source commit: `8af8a15c5259af2a0c6e36de1b241f307914cd98`
+Source commit: `66a89256dd285250b4b3073d81fe84cfa54db13c`
 
 ## Clean regression
 
